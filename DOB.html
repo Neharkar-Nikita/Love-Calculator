@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet"> 
+    <title>LOVE</title>
+
+    <style >
+        body{
+         background-image:  url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-valentines-day-background-illustration-love-gift-box-pink-image_21289.jpg");
+       
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         width: 100%;
+         height: 100vh;
+         position: relative;
+        }
+        header{
+        max-width: 100%;
+         position: relative;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+        }
+        /* .container
+        {
+            width: 30px;
+            height:20px;
+            position: relative;
+        } */
+       </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color:#f76a8c">
+    
+            <a class="navbar-brand" href="#" style="font-size: 25px; color:white;
+            font-family: 'Sriracha', cursive; ">Love Calculator </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="love.html" style="font-size: 25px; color:#beeef7;
+                  font-family: 'Sriracha', cursive; ">Love Cal By Name | <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="DOB.html" style="font-size: 25px; color:#beeef7;
+                  font-family: 'Sriracha', cursive; "" >Love Cal By DOB |</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="zontic.html" style="font-size: 25px; color:#beeef7;
+                  font-family: 'Sriracha', cursive; "" >Love Cal Zodiac Signs</a>
+                </li>
+
+
+                
+                
+              </ul>
+             
+            </div>
+          </nav>
+          <header >
+ 
+            <div class="card w-50 m-auto text-center ">
+              <div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
+              <div class="card-body">
+                <form>
+                    
+                    <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-sm">Your DOB</label>
+                        <div class="col-sm-10">
+                          <input type="date" class="form-control"  placeholder=""  id="name" required="true">
+                        </div>
+                      </div>
+                    
+                    
+                      <div class="form-group row">
+                        <label for="colFormLabel" class="col-sm-2 col-form-label col-form-label-sm">Partner's DOB</label>
+                        <div class="col-sm-10">
+                          <input type="date" class="form-control"  placeholder=""  id="lname" required="true">
+                        </div>
+                      </div>
+                    
+                    </form>
+                <div class="w-70 m-auto">
+                 <button  class="btn btn-success w-50" onclick="checkloveper()"> Calulate Love </button>
+                </div>
+                <br>
+                <div>
+                 
+                  <input type="text" name="" placeholder="LOVE PERCENTAGE" class="form-control text-center w-25 m-auto"  id="lovevalue" style="background-color:#f76a8c;color:white;">
+               
+                </div>
+              </div> 
+              <div class="card-footer ">God Bless Your RelationShip</div>
+            </div>
+            
+            </header>
+            
+            <script>
+             function checkloveper(){
+            
+              var name = document.getElementById('name').value;
+              var lname = document.getElementById('lname').value;
+            
+              if(name == ""){
+               alert('Please enter your name');
+              }else if (name.length <=2 ) {
+               alert('Min lenght is 3')
+              }else if(!isNaN(name)){
+               alert('Numbers are not allowed');
+               }
+            
+              else if(lname == ""){
+               alert('Please enter your love name');
+              }else if (lname.length <=2 ) {
+               alert('Min lenght is 3')
+              }else if(!isNaN(lname)){
+               alert('Numbers are not allowed');
+              }
+              else{
+              var lovdata = Math.random() * 100;
+              lovdata = Math.floor(lovdata);
+              document.getElementById('lovevalue').value = lovdata + "%"; 
+              }
+              
+             }
+            </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
